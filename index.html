@@ -11,6 +11,13 @@
         $(document).ready(
             console.log("pagina caricata")
         )
+        $('.grid').masonry({
+            console.log("dentro masonrySel")
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+
     </script>
 </head>
 <body>
