@@ -19,10 +19,41 @@ $(document).ready(function () {
     /*var hideAbarth = function () {
         $('.grid').firstChild.hide();
     }*/
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item1',
-        columnWidth: '.grid-container',
-        percentPosition:true
+   /* var $grid = */
+   var $grid=$('.grid').masonry({
+       // options
+       itemSelector: '.grid-item',
+       columnWidth: '.grid-sizer',
+       percentPosition:true
+       //fitWidth:true
+   })
+
+    $grid.imagesLoaded().progress(function(){
+      $('.grid').masonry;
+    })
+
+    $grid.on( 'click', '.grid-item', function() {
+  // change size of item via class
+  console.log("clicked");
+  $( this ).toggleClass('gigante');
+  // trigger layout
+  $grid.masonry();
+});
+
+    // $grid=imagesLoaded.progress(function () {
+    //     $('.grid').masonry();
+    // });
+
+    // init Masonry
+    /*var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        columnWidth: '.grid-sizer'
     });
+
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });*/
+
 })

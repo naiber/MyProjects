@@ -1,6 +1,38 @@
-.grid-container{
-    width: 80%;
+.grid{
+   /* margin-left: auto;
+    margin-right: auto;*/
+    box-sizing: border-box;
 }
-.grid-item1 {
-    width: 50%;
+.grid:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.grid-sizer,.grid-item{
+    width: 33.333%;
+    padding:3px 5px 0 5px;
+    box-sizing: inherit;
+    /*margin:0 auto 20px auto;*/
+}
+.grid-item{
+    float:left;
+}
+.grid-item img {
+    display:block;
+    max-width: 100%;
+}
+.grid-item-width2 {
+    /*width: 30%;*/
+    width: 400px;
+}
+.grid--item-height2{
+    /*width: 30%;*/
+    height: 250px;
+}
+.gigante{
+  width: 600px;
+  height: 400px;
+}
+.grid-item:hover{
+  opacity: 0.5;
 }
